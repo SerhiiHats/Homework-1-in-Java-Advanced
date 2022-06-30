@@ -1,6 +1,6 @@
 package models;
 
-public class Employee {
+public class Employee implements Comparable<Employee>{
     private String name;
     private String jobTitle;
     private int age;
@@ -67,4 +67,8 @@ public class Employee {
         return strBld.toString();
     }
 
+    @Override
+    public int compareTo(Employee o) {
+        return this.salary - o.salary;
+    }
 }

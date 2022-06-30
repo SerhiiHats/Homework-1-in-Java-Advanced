@@ -1,5 +1,6 @@
 import models.Employee;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
@@ -7,6 +8,7 @@ import java.util.List;
  Задание 2
  Вывод на экран элементов List:
  Создать список, заполнить его на 10 элементов и вывести на экран содержимое используя iterator.
+ (УСЛОЖНИЛ ЗАДАЧУ, добавив реализацию сортировки списка (Employee) по зарплате, перед выводом содержимого)
  */
 
 public class Main {
@@ -22,6 +24,8 @@ public class Main {
         employees.add(new Employee("Глеб", "исполняющий директор", 27, 2200));
         employees.add(new Employee("Никита", "ведущий специалист", 27, 1500));
         employees.add(new Employee("Данил", "региональный представитель", 29, 1600));
+
+        Collections.sort(employees);
 
         Iterator<Employee> iterator = employees.listIterator();
         int count = 0;
